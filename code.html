@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Template: Coding Project by Michelle Joseph</title>
+    <title>Rewind: Coding Project by Michelle Joseph</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,7 @@
         <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <link href="css/site.css" rel="stylesheet">
     <link href="css/prism.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/CorgiFavicon.png">
+    <link rel="icon" type="image/png" href="img/favicon_io/favicon-32x32.png">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -22,7 +22,7 @@
 <!-- NAV SECTION  -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/FrontFacingCorgi.png" class="d-inline-block align-text-top" width="30" height="30">APP NAME</a>
+        <a class="navbar-brand" href="#"><img src="img/favicon_io/favicon-32x32.png" class="d-inline-block align-text-top" width="30" height="30">  Rewind</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
                     <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                    <a class="nav-link" target="_blank" href="https://github.com/michbergjo/Rewind">Git Repo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="https://michelle-joseph-portfolio.netlify.app/">About</a>
@@ -51,21 +51,63 @@
 <!-- MAIN SECTION  -->
 <main class="flex-shrink-0">
     <div class="container py-4 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark">The Code for APP NAME</h2>
+        <h2 class="border-1 border-bottom border-dark">The Code for Rewind</h2>
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
                 <pre class="line-numbers"><code class="language-javascript">
-                        // Call Hello World 
-                        function HelloWorld(){
-                         alert("hello world");
+                    //Get String from the page
+                    //controller function
+                    function getValues(){
+                    
+                        document.getElementById("alert").classList.add("invisible");
+                    
+                       let userString = document.getElementById("userString").value;
+                    
+                       let revString = reverseString(userString);
+                    
+                       displayString(revString);
+                    }
+                    
+                    //Reverse String
+                    //logic function
+                    function reverseString(userString){
+                    
+                        let revString = [];
+                        
+                        //reverse a String using a for loop
+                        for (let index = userString.length-1; index >= 0; index--) {
+                          revString += userString[index]; 
                         }
+                    
+                        return revString;
+                    }
+                    
+                    //Display reversed String to the user 
+                    //view function 
+                    function displayString(revString){
+                    
+                        //write the message to the page
+                        document.getElementById("msg").innerHTML = `Your string reversed is: ${revString}`;
+                    
+                        //turn on the alert box 
+                        document.getElementById("alert").classList.remove("invisible");
+                    }
                     </code>
                 </pre>
             </div>
             <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that displays an alert with a message of 'Hello World'</p>
+                <p>The Code is structured in three functions.</p>
+                <h5>Rewind</h5>
+                <p>Rewind is a set of functions that reverses an input String.</p>
+                <p>The getValues function checks that the alert is set to 'invisible' at the start.  Then it retrieves the value of the users inputed string.
+                    Next, it calls revString to reverse the given string and, finally, it calls displayString to display the reversed string to the user.
+                </p>
+                <p>The reverseString function uses a for loop to create a new string with the characters from the original string in reverse order. It then returns
+                    the reversed string.
+                </p>
+                <p>The displayString function uses a template literal to display the reversed string to the user. I removes the 'invisible' designation from the 
+                    alert, so the user sees the alert and the reversed string. 
+                </p>
             </div>
         </div>
     </div>
@@ -83,9 +125,9 @@
            </div>
            <div class="col d-flex align-items-center justify-content-start justify-content-start justify-content-md-center">
                <div class="row">
-                   <div class="col social"><a href="#"  target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
-                   <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
-                   <div class="col social"><a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></div>
+                   <div class="col social"><a href="https://www.linkedin.com/in/michelle-joseph-279184219/"  target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                   <div class="col social"><a href="https://github.com/michbergjo" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
+                   <div class="col social"><a href="https://www.instagram.com/michellecodestheworld/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></div>
                </div>
            </div>
        </div>

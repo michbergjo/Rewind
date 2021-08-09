@@ -1,7 +1,7 @@
 :root{
-    --primary-color: rgba(145, 14, 138, 0.774);
-    --secondary-color: rgb(255, 168, 97);
-    --dark-color: rgba(71, 0, 88, 0.678);
+    --primary-color: rgba(101, 119, 128, 0.774);
+    --secondary-color: rgb(97, 205, 255);
+    --dark-color: rgba(81, 81, 82, 0.678);
     --white-color: #e7f7f7;
 }
 
@@ -36,15 +36,15 @@ footer .social>a:hover{
 }
 
 .bsicon{
-    color: purple;
+    color: rgb(15, 4, 119);
 }
 
 .jsicon{
-    color: rgb(226,211,4);
+    color: rgb(89, 4, 226);
 }
 
 .html5icon{
-    color: orangered;
+    color: rgb(0, 162, 255);
 }
 
 .css3icon{
@@ -66,6 +66,15 @@ main>.container {
     padding: 60px 15px 0;
 }
 
+.btnCustom{
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.btnCustom:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
 
 .sticky-nav {
     position: fixed;

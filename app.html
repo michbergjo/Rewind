@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Template: Coding Project by Michelle Joseph</title>
+    <title>Rewind: Coding Project by Michelle Joseph</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
     <link href="css/site.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/CorgiFavicon.png">
+    <link rel="icon" type="image/png" href="img/favicon_io/favicon-32x32.png">
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -21,7 +21,7 @@
 <!-- NAV SECTION  -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/FrontFacingCorgi.png" class="d-inline-block align-text-top" width="30" height="30">APP NAME</a>
+        <a class="navbar-brand" href="#"><img src="img/favicon_io/favicon-32x32.png" class="d-inline-block align-text-top" width="30" height="30">  Rewind</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
                     <a class="nav-link" href="code.html">The Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                    <a class="nav-link" target="_blank" href="https://github.com/michbergjo/Rewind">Git Repo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="https://michelle-joseph-portfolio.netlify.app/">About</a>
@@ -51,7 +51,35 @@
 <!-- MAIN SECTION  -->
 <main class="flex-shrink-0">
     <div class="container">
-
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+                <h1 class="display-5 fw-bold lh-1 mb-3 mt-3">
+                    Rewind: A Coding Project
+                </h1>
+                <h4 class="lead mt-2 mb-2">
+                    There and back again. A javascript coding exercise using strings. Write a program that displays a string 
+                    in reverse.
+                </h4>
+            </div>
+            <div class="col">
+                <h5 class="border-1 border-bottom border-secondary mt-3">Enter a String to Reverse</h5>
+                <form class="row gx-3 gy-2">
+                    <div class="col">
+                        <input id="userString" type="text" class="form-control" placeholder="Enter a String" aria-label="Enter a String">
+                    </div>
+                    <div class="col-12">
+                        <button type="button" id="btnSubmit" class="btn btnCustom">Reverse Me</button>
+                    </div>
+                    <div class="alert alert-light mt-5 invisible fade show" id="alert" role="alert">
+                        <h4 class="alert-heading">Complete! Your String is reversed.</h4>
+                        <hr>
+                        <p class="mb-0" id="msg">
+                            <!--Insert Message-->
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </main>
 
@@ -67,9 +95,9 @@
            </div>
            <div class="col d-flex align-items-center justify-content-start justify-content-start justify-content-md-center">
                <div class="row">
-                   <div class="col social"><a href="#"  target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
-                   <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
-                   <div class="col social"><a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></div>
+                   <div class="col social"><a href="https://www.linkedin.com/in/michelle-joseph-279184219/"  target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                   <div class="col social"><a href="https://github.com/michbergjo" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
+                   <div class="col social"><a href="https://www.instagram.com/michellecodestheworld/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></div>
                </div>
            </div>
        </div>
@@ -82,5 +110,8 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
 </script>
 <script src="js/site.js"></script>
+<script>
+    document.getElementById("btnSubmit").addEventListener("click", getValues);
+</script>
 </body>
 </html>
